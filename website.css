@@ -1,0 +1,326 @@
+/* General Body Styling */
+body {
+    font-family: Poppins, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header Styling */
+header {
+    position: relative; /* Enable positioning of pseudo-elements */
+    color: white; /* Text color for contrast */
+    text-align: center;
+    padding: 50px 0; /* Adjust padding for spacing */
+    height: 400px; /* Adjust height as needed */
+    overflow: hidden; /* Prevent overflow of content */
+}
+
+/* Background Image for Header */
+header::before {
+    content: ""; /* Required for pseudo-element */
+    position: absolute; /* Position relative to header */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('i11.jpg'); /* Path to your header background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -2; /* Place behind the overlay */
+}
+
+/* Semi-Transparent Overlay */
+header::after {
+    content: ""; /* Required for pseudo-element */
+    position: absolute; /* Position relative to header */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); /* Semi-transparent overlay (adjust color and opacity) */
+    z-index: -1; /* Place between the background image and content */
+}
+
+/* Header Content Styling */
+.header-content {
+    position: relative; /* Ensure content is above the overlay */
+    max-width: 600px;
+    margin: 0 auto; /* Center the content */
+    color: white; /* Ensure text is readable */
+    z-index: 1; /* Ensure content is above overlay */
+    
+}
+
+.header-content h1 {
+    font-size: 2.5em;
+    margin: 20px 0; /* Margin to adjust spacing */
+}
+
+.header-content p {
+    font-size: 1.2em;
+    margin: 20px 0; /* Margin to adjust spacing */
+}
+
+.header-content button {
+    background: white;
+    color: #ff7e5f;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+/* Navbar Styling */
+.navbar {
+    /*background-image: url('i.jpeg'); /* Path to your navbar background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    height: 80px; /* Adjust height as needed */
+}
+
+.navbar .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+/* Navbar Links Styling */
+.navbar nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar nav ul li {
+    display: inline; /* Ensure list items are inline */
+}
+
+.navbar nav ul li a {
+    display: inline-block; /* Ensure padding and background are applied properly */
+    color: #ff7e5f; /* Text color */
+    text-decoration: none; /* Remove underline */
+    background: white; /* Button background color */
+    padding: 10px 20px; /* Adjust padding as needed */
+    border-radius: 5px; /* Rounded corners for buttons */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+/* Navbar Links Hover Effect */
+.navbar nav ul li a:hover {
+    background: #ff7e5f; /* Change background color on hover */
+    color: white; /* Text color on hover */
+}
+
+/* Additional Styles for Buttons (if needed) */
+.header-content button {
+    background: white;
+    color: #ff7e5f; /* Button text color */
+    border: 2px solid #ff7e5f; /* Optional: border around button */
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    font-size: 1em;
+    border-radius: 5px; /* Rounded corners for buttons */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+.header-content button:hover {
+    background: #ff7e5f; /* Change button background color on hover */
+    color: white; /* Change button text color on hover */
+}
+
+/* Features Section Styling */
+.features {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    justify-content: space-around; /* Distribute items evenly */
+    padding: 50px 0;
+    background: #f8f8f8;
+}
+.features .feature {
+    display: inline-block;
+    width: 30%; /* Fixed width for service items */
+    margin: 0 1%; /* Space between service items */
+    position: relative; /* For positioning the overlay */
+    overflow: hidden; /* Ensure contents stay within bounds */
+    border-radius: 10px; /* Rounded corners for a modern look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition effect */
+    text-align: center;
+}
+.features .feature:hover {
+    transform: scale(1.05); /* Slightly enlarge the feature item on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Increase shadow on hover */
+}
+
+.features .feature img {
+    width: 100%; /* Full width of the feature item */
+    height: 200px; /* Fixed height for images to ensure consistency */
+    object-fit: cover; /* Cover the container, cropping if needed */
+    display: block; /* Removes space below images */
+    border-bottom: 4px solid #ff7e5f; /* Stylish border */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition effect */
+}
+
+.feature img:hover {
+    transform: scale(1.05); /* Slightly enlarge the image on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add shadow for depth */
+}
+
+/* About Section Styling */
+.about {
+    padding: 4em 2em; /* Increased padding for more space */
+    background-color: #e0f7fa;
+    position: relative; /* For positioning background effects */
+    overflow: hidden; /* Hide overflow for background effects */
+}
+
+/* Background Image for About Section */
+.about::before {
+    content: ""; /* Required for pseudo-element */
+    position: absolute; /* Position relative to about section */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('i8.jpeg'); /* Path to your background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.1; /* Faint background image */
+    z-index: -1; /* Place behind content */
+}
+
+/* About Content Styling */
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative; /* Ensure content is above background */
+    padding: 2em; /* Add padding for spacing */
+    background: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+
+}
+
+/* About Text Styling */
+.about-text {
+    flex: 1;
+    margin-right: 2em; /* Space between text and image */
+    
+}
+
+.about-text h2 {
+    font-size: 2em; /* Larger heading for impact */
+    margin-bottom: 1em;
+    color: #333; /* Darker text color */
+    text-decoration: underline;
+    text-decoration-color: #ff7e5f; /* Color of the underline */
+    text-decoration-thickness: 2px; /* Thickness of the underline */
+    text-decoration-style: solid; /* Style of the underline */
+}
+
+.about-text p {
+    line-height: 1.6;
+    color: black; /* Lighter text color */
+    font-size: 1.1em; /* Slightly larger font for readability */
+}
+.about-text h6 {
+    line-height: 1.6;
+    color:#ff7e5f; /* Lighter text color */
+    font-size: 2em; /* Slightly larger font for readability */
+}
+.about-text a {
+    color: #ff7e5f; /* Link color */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Bold links */
+}
+
+.about-text a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* About Image Styling */
+.about-image {
+    flex: 1;
+    text-align: right;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    max-width: 500px; /* Adjust based on your design */
+    border-radius: 10px; /* Rounded corners for image */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s ease; /* Smooth zoom effect */
+}
+
+.about-image img:hover {
+    transform: scale(1.05); /* Zoom effect on hover */
+}
+
+/* Services Section Styling */
+.services {
+    padding: 50px 0;
+    text-align: center;
+    background-color:lightgrey;
+}
+
+.services .service {
+    display: inline-block;
+    width: 30%; /* Fixed width for service items */
+    margin: 0 1%; /* Space between service items */
+    position: relative; /* For positioning the overlay */
+    overflow: hidden; /* Ensure contents stay within bounds */
+    border-radius: 10px; /* Rounded corners for a modern look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition effect */
+    background-color: white;
+}
+
+.services .service:hover {
+    transform: scale(1.05); /* Slightly enlarge the service item on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Increase shadow on hover */
+}
+
+.services .service img {
+    width: 100%; /* Full width of the service item */
+    height: 200px; /* Maintain aspect ratio */
+    border-bottom: 4px solid #ff7e5f; /* Stylish border */
+}
+
+.services h2 {
+    font-size: 2em; 
+    text-decoration: underline;
+    text-decoration-color: #ff7e5f; 
+    text-decoration-thickness: 2px; 
+    text-decoration-style: solid;
+}
+
+.services .service h3 {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.services .service p {
+    font-size: 1em;
+    color: #666;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #333;
+    color: white;
+}
